@@ -6,6 +6,8 @@
 ### [.fzf-git-history.zsh](.fzf-git-history.zsh)
 **```git log  --all --oneline --graph```** extension shell script.
 
+fzf > delta preview > editor preview
+
 <details>
 <summary>demo.gif</summary>
 <img src="./docs/fzf-git-history.gif" />
@@ -13,3 +15,5 @@
 
 ### [.fzf-git-list.zsh](.fzf-git-list.zsh)
 **```git switch```** extension shell script.
+
+support branch & tag
