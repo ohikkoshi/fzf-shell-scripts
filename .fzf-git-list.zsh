@@ -34,7 +34,7 @@ fzf_git_list()
 		printf "%s\n%s\n%s\n%s" \
 		"$local_branches" "$remote_branches" "$local_tags" "$remote_tags" |
 		rg -v '^$' |
-		fzf --prompt="git switch > " +m
+		fzf +m
 	)
     
 	# cancel
