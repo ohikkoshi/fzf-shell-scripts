@@ -1,3 +1,4 @@
+# fd:https://github.com/sharkdp/fd
 # fzf:https://github.com/junegunn/fzf
 # eza:https://github.com/eza-community/eza
 # gnu-sed:https://www.gnu.org/software/sed/
@@ -12,7 +13,7 @@ function cd()
 	local dir
 
 	while true; do
-		directories=$(echo ".." && find . -maxdepth 1 ! -path . -type d -o -type l | sed 's|^\./||' | sort)
+		directories=$(echo ".." && fd -d 1 -t d -t l -H | sed 's|^\./||' | sort)
 		dir="$(
 			printf '%s\n' "${directories[@]}" |
 			fzf --preview '
